@@ -1,8 +1,112 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AY1-7m-OGA">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
-    <scenes/>
+    <scenes>
+        <!--Add Location View Controller-->
+        <scene sceneID="Z4x-ln-lh2">
+            <objects>
+                <viewController id="2Zv-zd-tKB" customClass="AddLocationViewController" customModule="SwiftLocationTriviaDelegates" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XE7-bj-sms"/>
+                        <viewControllerLayoutGuide type="bottom" id="nfI-A5-6ZU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="oeX-bM-LhN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add Location" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cxL-jc-j3U">
+                                <rect key="frame" x="20" y="144" width="280" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="textFieldEditing:" destination="2Zv-zd-tKB" eventType="editingChanged" id="Z7X-Py-ewV"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="YYE-Vb-ohK">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="f3I-kT-EYz">
+                            <connections>
+                                <action selector="cancelNavigationButtonDidTouchUpInside:" destination="2Zv-zd-tKB" id="5cn-5c-gvQ"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="78G-pf-u77">
+                            <connections>
+                                <action selector="saveNavigationButtonDidTouchUpInside:" destination="2Zv-zd-tKB" id="waH-kH-Gem"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="addLocationTextField" destination="cxL-jc-j3U" id="0hn-yb-ROL"/>
+                        <outlet property="cancelButtonOutlet" destination="f3I-kT-EYz" id="FmL-rP-gy2"/>
+                        <outlet property="saveButtonOutlet" destination="78G-pf-u77" id="9RW-Tb-O2Q"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EMC-4W-Mue" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2137" y="410"/>
+        </scene>
+        <!--Locations Table View Controller-->
+        <scene sceneID="3tE-m5-Bjn">
+            <objects>
+                <tableViewController id="hh7-VL-XId" customClass="LocationsTableViewController" customModule="SwiftLocationTriviaDelegates" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Nv9-gE-8e8">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="locationsCell" id="3Vm-5T-NiR">
+                                <rect key="frame" x="0.0" y="92" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3Vm-5T-NiR" id="Vqn-ew-LFM">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="hh7-VL-XId" id="XEa-04-Pvs"/>
+                            <outlet property="delegate" destination="hh7-VL-XId" id="JeD-Ph-BYy"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="Mxb-lx-V6f">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Kck-EB-seQ">
+                            <connections>
+                                <action selector="addNavigationButtonDidTouchUpInside:" destination="hh7-VL-XId" id="nBj-wC-9qn"/>
+                                <segue destination="2Zv-zd-tKB" kind="show" identifier="addLocationSegue" id="j7n-9q-nJr"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YK1-kd-gIJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1698" y="410"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="MMV-y7-xRj">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="AY1-7m-OGA" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="TJD-qk-JLg">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="hh7-VL-XId" kind="relationship" relationship="rootViewController" id="FMv-9e-A1a"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bFt-B0-zdC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="886" y="410"/>
+        </scene>
+    </scenes>
 </document>

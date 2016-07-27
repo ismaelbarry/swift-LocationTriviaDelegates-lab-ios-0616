@@ -12,6 +12,8 @@
 		2B95E50B1D46946D00A3CE03 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B95E50A1D46946D00A3CE03 /* AppDelegate.swift */; };
 		2B95E50F1D4694C100A3CE03 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B95E50E1D4694C100A3CE03 /* LaunchScreen.storyboard */; };
 		2B95E5111D46AE7F00A3CE03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B95E5101D46AE7F00A3CE03 /* Assets.xcassets */; };
+		2C07B42C1D479EF10056902E /* LocationsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C07B42B1D479EF10056902E /* LocationsTableViewController.swift */; };
+		2C07B42E1D479F090056902E /* AddLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C07B42D1D479F090056902E /* AddLocationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +23,8 @@
 		2B95E50A1D46946D00A3CE03 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../AppDelegate.swift; sourceTree = "<group>"; };
 		2B95E50E1D4694C100A3CE03 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = ../LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2B95E5101D46AE7F00A3CE03 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = SOURCE_ROOT; };
+		2C07B42B1D479EF10056902E /* LocationsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationsTableViewController.swift; sourceTree = "<group>"; };
+		2C07B42D1D479F090056902E /* AddLocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddLocationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +61,8 @@
 				2B5C59041D4264BA00273743 /* Main.storyboard */,
 				2B5C59001D42641200273743 /* Location.swift */,
 				2B95E50A1D46946D00A3CE03 /* AppDelegate.swift */,
+				2C07B42B1D479EF10056902E /* LocationsTableViewController.swift */,
+				2C07B42D1D479F090056902E /* AddLocationViewController.swift */,
 				2B95E50E1D4694C100A3CE03 /* LaunchScreen.storyboard */,
 			);
 			path = SwiftLocationTriviaDelegates;
@@ -135,6 +141,8 @@
 			files = (
 				2B95E50B1D46946D00A3CE03 /* AppDelegate.swift in Sources */,
 				2B5C59011D42641200273743 /* Location.swift in Sources */,
+				2C07B42C1D479EF10056902E /* LocationsTableViewController.swift in Sources */,
+				2C07B42E1D479F090056902E /* AddLocationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
